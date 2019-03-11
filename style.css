@@ -97,8 +97,39 @@ header nav {
 }
 
 .contact-invitation {
-  border: 2px solid red;
+  text-align: center;
   height: 200px;
+}
+.contact-invitation h2 {
+  font-weight: 300;
+  font-size: 2em;
+  letter-spacing: 1px;
+}
+.contact-invitation a {
+  margin: 0 10px;
+  padding: 12px 45px;
+  border: 1.5px solid rgba(17, 136, 216, 0.8);
+  border-radius: 30px;
+  color: rgba(17, 136, 216, 0.8);
+  font-size: 1.1em;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.contact-invitation .contact {
+  background-color: rgba(17, 136, 216, 0.8);
+  color: white;
+}
+
+ .contact-invitation a:hover {
+  color: rgb(255, 196, 0);
+  border-color: rgb(255, 196, 0);
+} 
+
+.contact-invitation .contact:hover {
+  background-color: rgb(255, 196, 0);
+  border-color: rgb(255, 196, 0);
+  color: white;
 }
 
 .content {
