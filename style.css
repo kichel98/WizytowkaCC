@@ -141,10 +141,62 @@ header nav {
   color: white;
 }
 
-.content {
-  border: 2px solid red;
+#middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgb(247, 247, 247);
-  height: 1000px;
+}
+
+.content {
+  height: 90%;
+  width: 80%;
+  padding: 3em 1em;
+}
+
+#about-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+#about-me h2 {
+  font-size: 2em;
+  font-weight: 700;
+}
+#about-me .info {
+  width: 100%;
+  flex: 5;
+  background-color: white;
+}
+.info .inner {
+  display: flex;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  padding: 3em 50px;
+}
+
+.personal-list {
+  flex: 3;
+}
+
+.personal-text {
+  display: flex;
+  flex-direction:column;
+  padding-left: 20px;
+  border-left: 1px solid rgba(17, 136, 216, 0.8);
+  font-size: 1.25em;
+  line-height: 1.5;
+  flex: 6;
+}
+
+#skills {
+
+}
+
+#portfolio {
+
 }
 
 footer {
@@ -193,7 +245,7 @@ footer {
   padding-top: 10%;
   flex: 1;
 }
- .contact-left-content .text {
+.contact-left-content .text {
   letter-spacing: 0.5px;
   font-size: 1.1em;
   line-height: 1.3;
