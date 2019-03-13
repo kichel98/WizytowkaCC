@@ -1,3 +1,8 @@
+:root {
+  --main-color: rgba(17, 136, 216, 0.8);
+  --bg-not-white-color: rgb(247, 247, 247);
+  --button-hover-color: rgb(255, 196, 0);
+}
 body {
   padding: 0;
   margin: 0;
@@ -10,7 +15,7 @@ body {
 }
 header {
   display: flex;
-  height: 600px;
+  box-sizing: border-box;
   width: 100%;
   position: relative; 
 }
@@ -30,6 +35,7 @@ header::after {
 header .left {
   flex: 5;
   position: relative;
+  padding: 12em 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,11 +46,11 @@ header .left {
 
 .left .flex-item {
   width: calc(100% - 150px);
-  margin: 10px 10%;
+  margin: 1% 10%;
 }
 
 span.name {
-  color: rgb(17, 136, 216);
+  color: var(--main-color);
 }
 
 .left .image {
@@ -58,20 +64,38 @@ span.name {
   background-size: contain;
   background-image: url('https://store.playstation.com/store/api/chihiro/00_09_000/container/GB/en/99/EP2402-CUSA05624_00-AV00000000000124//image?_version=00_09_000&platform=chihiro&w=720&h=720&bg_color=000000&opacity=100');
 }
+@media only screen and (max-width: 950px) {
+  .left .image {
+    display: none;
+  }
+  .left .flex-item {
+    width: 90%;
+    margin: 1% 10%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  header .left {
+    padding: 6em 0;
+    position: static;
+  }
+  .left h1 {
+    font-size: 3.7em;
+  }
+}
 header nav {
-  background-color: rgba(17, 136, 216, 0.8);
+  background-color: var(--main-color);
   flex: 4;
   position: relative;
 }
 
 .menu {
   position: absolute;
-  right: 20px;
+  right: 3%;
 }
 
 .menu li {
   display: inline-block;
-  margin: 10px 20px;
+  margin: 0.5em 1.5em;
 }
 
 .menu a {
@@ -83,8 +107,8 @@ header nav {
 .social {
   color: white;
   position: absolute;
-  bottom: 20px;
-  right: 20px;
+  bottom: 5%;
+  right: 8%;
 }
 .social h5 {
   display: block;
@@ -97,16 +121,9 @@ header nav {
   font-size: 2em;
   color: white;
 }
-.icon-twitter-circled {
-  margin-left: 0;
-}
-.icon-facebook-circled {
-  margin-right: 0;
-}
 
 .contact-invitation {
   text-align: center;
-  height: 200px;
   background-color: white;
 }
 .contact-invitation h2 {
@@ -115,29 +132,30 @@ header nav {
   letter-spacing: 1px;
 }
 .contact-invitation a {
-  margin: 0 10px;
-  padding: 12px 45px;
-  border: 1.5px solid rgba(17, 136, 216, 0.8);
-  border-radius: 30px;
-  color: rgba(17, 136, 216, 0.8);
+  display: inline-block;
+  margin: 1em 1.5em 3em 1.5em;
+  padding: 0.75em 2.3em;
+  border: 1.5px solid var(--main-color);
+  border-radius: 2em;
+  color: var(--main-color);
   font-size: 1.1em;
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
 }
 .contact-invitation .contact {
-  background-color: rgba(17, 136, 216, 0.8);
+  background-color: var(--main-color);
   color: white;
 }
 
  .contact-invitation a:hover {
-  color: rgb(255, 196, 0);
-  border-color: rgb(255, 196, 0);
+  color: var(--button-hover-color);
+  border-color: var(--button-hover-color);
 } 
 
 .contact-invitation .contact:hover {
-  background-color: rgb(255, 196, 0);
-  border-color: rgb(255, 196, 0);
+  background-color: var(--button-hover-color);
+  border-color: var(--button-hover-color);
   color: white;
 }
 
@@ -145,7 +163,7 @@ header nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(247, 247, 247);
+  background-color: var(--bg-not-white-color);
 }
 
 .content {
@@ -174,7 +192,7 @@ header nav {
   box-sizing: border-box;
   height: 100%;
   width: 100%;
-  padding: 3em 50px;
+  padding: 3em 3em;
 }
 
 .personal-list {
@@ -184,13 +202,21 @@ header nav {
 .personal-text {
   display: flex;
   flex-direction:column;
-  padding-left: 20px;
-  border-left: 1px solid rgba(17, 136, 216, 0.8);
+  padding-left: 1.5em;
+  border-left: 1px solid var(--main-color);
   font-size: 1.25em;
   line-height: 1.5;
   flex: 6;
 }
-
+@media only screen and (max-width: 1000px) {
+  .info .inner {
+    flex-direction: column;
+  }
+  .personal-text {
+    border: none;
+    border-top: 1px solid var(--main-color);
+  }
+}
 #skills {
 
 }
@@ -201,11 +227,12 @@ header nav {
 
 footer {
   display: flex;
-  position: relative;
+  /* position: relative; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 750px;
+  padding: 5em 0 0 0;
+  /* height: 750px; */
 }
 
 #contact {
@@ -219,7 +246,7 @@ footer {
   justify-content: center;
   align-items: center;
   flex: 3;
-  background-color: rgba(17, 136, 216, 0.8);
+  background-color: var(--main-color);
   color: white;
 }
 .contact-left-content {
@@ -229,17 +256,17 @@ footer {
   width: 90%;
   padding-right: 15%;
   box-sizing: border-box;
-  position: relative;
+  /* position: relative; */
 }
-.contact-left-content::after {
+/* .contact-left-content::after {
   content:"";
   background: white;
   position: absolute;
   top: 0;
   left: 0;
-  height: 0.5px;
+  height: 1px;
   width: 40%;
-}
+} */
 .contact-left-content span {
   display: block;
   padding-top: 10%;
@@ -255,13 +282,14 @@ footer {
   flex-direction: column;
   justify-content: flex-end;
   flex: 4;
+  margin-top: 13em;
 }
 .contact-right {
   display: flex;
   justify-content: center;
   align-items: center;
   flex: 5;
-  background-color: rgb(247, 247, 247);
+  background-color: var(--bg-not-white-color);
 }
 .contact-right-content {
   box-sizing: border-box;
@@ -273,7 +301,7 @@ footer {
 }
 .contact-right-content h1 {
   display: block;
-  color: rgba(17, 136, 216, 0.8);
+  color: var(--main-color);
   margin-top: 0px;
 }
 .contact-right-content div {
@@ -286,8 +314,8 @@ footer {
   display: block;
   width: 100%;
   border: none;
-  border-bottom: 1px solid rgba(17, 136, 216, 0.8);
-  background-color: rgb(247, 247, 247);
+  border-bottom: 1px solid var(--main-color);
+  background-color: var(--bg-not-white-color);
 }
 div.last {
   display: flex;
@@ -301,7 +329,23 @@ input.last {
 footer h5 {
   color: grey;
   font-weight: 300;
-  position: absolute;
+  /* position: absolute; */
   bottom: 0px;
+}
+@media only screen and (max-width: 650px) {
+
+  #contact {
+    flex-direction: column-reverse;
+  }
+  .contact-left-content .address {
+    margin-top: 3em;
+    margin-bottom: 2em;
+  }
+  .contact-right-content h1 {
+    margin-top: 2em;
+  }
+  input.last {
+    margin-bottom: 2em;
+  }
 }
 
