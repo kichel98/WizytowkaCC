@@ -7,10 +7,10 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 .container {
-  width: 90%;
+  width: 100%;
   margin: auto;
 }
 header {
@@ -42,6 +42,14 @@ header .left {
 }
 .left h1 {
   font-size: 6em;
+}
+.left h2 {
+  font-size: 2em;
+  margin: 0;
+}
+.left h4 {
+  font-weight: 600;
+  margin: 0;
 }
 
 .left .flex-item {
@@ -100,7 +108,8 @@ header nav {
 
 .menu a {
   color: white;
-  font-size: 1.5em;
+  font-size: 1.2em;
+  font-weight: 600;
   text-decoration: none;
 }
 
@@ -113,6 +122,9 @@ header nav {
 .social h5 {
   display: block;
   border-bottom: 1px solid white;
+  line-height: 2;
+  font-weight: 400;
+  font-size: 1.1em;
   text-align: right;
 }
 .icon {
@@ -127,7 +139,7 @@ header nav {
   background-color: white;
 }
 .contact-invitation h2 {
-  font-weight: 300;
+  font-weight: 600;
   font-size: 2em;
   letter-spacing: 1px;
 }
@@ -169,7 +181,7 @@ header nav {
 .content {
   height: 90%;
   width: 80%;
-  padding: 3em 1em;
+  padding: 1em 1em 3em 1em;
 }
 
 #about-me {
@@ -186,6 +198,7 @@ header nav {
   width: 100%;
   flex: 5;
   background-color: white;
+  box-shadow: 7px 7px 20px 3px rgba(0, 0, 0, 0.07);
 }
 .info .inner {
   display: flex;
@@ -197,20 +210,23 @@ header nav {
 
 .personal-list {
   flex: 3;
+  font-size: 1.1em;
 }
 
 .personal-text {
   display: flex;
   flex-direction:column;
+  justify-content: center;
   padding-left: 1.5em;
   border-left: 1px solid var(--main-color);
   font-size: 1.25em;
-  line-height: 1.5;
+  line-height: 1.75;
   flex: 6;
 }
 @media only screen and (max-width: 1000px) {
   .info .inner {
     flex-direction: column;
+    align-items: center;
   }
   .personal-text {
     border: none;
@@ -227,18 +243,16 @@ header nav {
 
 footer {
   display: flex;
-  /* position: relative; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 5em 0 0 0;
-  /* height: 750px; */
 }
 
 #contact {
   display: flex;
   box-shadow: 7px 7px 20px 3px rgba(0, 0, 0, 0.07);
-  height: 80%;
+  height: 90%;
   width: 80%;
 }
 .contact-left {
@@ -256,9 +270,9 @@ footer {
   width: 90%;
   padding-right: 15%;
   box-sizing: border-box;
-  /* position: relative; */
+  position: relative;
 }
-/* .contact-left-content::after {
+.contact-left-content::after {
   content:"";
   background: white;
   position: absolute;
@@ -266,7 +280,7 @@ footer {
   left: 0;
   height: 1px;
   width: 40%;
-} */
+}
 .contact-left-content span {
   display: block;
   padding-top: 10%;
@@ -275,7 +289,7 @@ footer {
 .contact-left-content .text {
   letter-spacing: 0.5px;
   font-size: 1.1em;
-  line-height: 1.3;
+  line-height: 1.35;
 }
 .contact-left-content .address {
   display: flex;
@@ -288,7 +302,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 5;
+  flex: 6;
   background-color: var(--bg-not-white-color);
 }
 .contact-right-content {
@@ -317,6 +331,9 @@ footer {
   border-bottom: 1px solid var(--main-color);
   background-color: var(--bg-not-white-color);
 }
+.contact-right-content input::placeholder {
+  color: rgb(168, 168, 168);
+}
 div.last {
   display: flex;
   align-items: flex-end;
@@ -329,7 +346,6 @@ input.last {
 footer h5 {
   color: grey;
   font-weight: 300;
-  /* position: absolute; */
   bottom: 0px;
 }
 @media only screen and (max-width: 650px) {
